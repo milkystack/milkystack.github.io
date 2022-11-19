@@ -1,2 +1,3 @@
 # milkystack.github.io
-ミニブログ
+ミニブログです。
+https://milkystack.github.io/

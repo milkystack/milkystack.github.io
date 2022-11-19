@@ -1,0 +1,394 @@
+html, body {
+    font-family: sans-serif;
+    background-color: #000000;
+    color: #fff;
+    /* user-select: none; */
+}
+a {
+    color: #fff;
+    text-decoration: none;
+}
+@font-face {
+	font-family: 'Outfit';
+	src: url(./Outfit-SemiBold.ttf);
+}
+/* bg */
+#bg {
+    width: 100%;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    left: 0px;
+    opacity: 0.5;
+}
+/* main */
+main {
+    width: 100%;
+    position: relative;
+    z-index: 1;
+}
+/* header */
+header {
+    width: 100%;
+    height: 80px;
+    position: sticky;
+    top: 0;
+    z-index: 2;
+    background-color: #0000003f;
+}
+header > .logo {
+    width: 120px;
+    height: 100%;
+    float: left;
+}
+header > #tabs {
+    width: calc(100% - 120px);
+    height: 100%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+header > #tabs > .tab {
+    width: 100px;
+    height: 70%;
+    float: left;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    cursor: pointer;
+    text-decoration: none;
+    font-family: "Outfit";
+}
+header > #tabs > .tab:hover {
+    background-color: #48474779;
+}
+header > #tabs > .active {
+    border-bottom: solid 1px #fff;
+    box-sizing: border-box;
+}
+
+/* loading */
+#loading {
+    width: 100%;
+    height: 100%;
+    background-color: #000000;
+    position: fixed;
+    top: 0%;
+    left: 0%;
+    z-index: 3;
+    transition: .2s;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+#loading > img{
+    width: 50%;
+    max-width: 300px;
+    animation: flash 2.8s ease-out infinite;
+}
+@keyframes flash {
+    0% {
+      opacity: 0.5;
+    }
+    50% {
+      opacity: 0;
+    }
+    100% {
+      opacity: 0.5;
+    }
+}
+
+  
+/* common */
+#main {
+    width: 100%;
+    padding: 0px 20px 20px 20px;
+    box-sizing: border-box;
+}
+.content_box {
+    width: 100%;
+    position: relative;
+    margin-top: 10px;
+    overflow: hidden;
+}
+.content_box > .title {
+    width: 100%;
+    height: 30px;
+    line-height: 30px;
+    padding-top: 30px;
+    font-size: 30px;
+    font-family: "Outfit";
+}
+.content_box > .content {
+    border-radius: 10px;
+}
+.content_box > .content > a {
+    width: 100%;
+    height: 40px;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    text-decoration: none;
+    background-color: #272727;
+    color: #fff;
+    font-family: sans-serif;
+}
+svg {
+    fill: currentColor;
+    height: auto;
+    max-width: 66vmin;
+    transform-origin: center;
+    width: 150px;
+    opacity: 0.2;
+    position: absolute;
+    top: 10px;
+    left: -60px;
+    animation:30s linear infinite rotation1
+}
+@keyframes rotation1{
+    0%{ transform:rotate(0);}
+    100%{ transform:rotate(360deg); }
+}
+
+
+/* updates */
+.section_parent {
+    position: relative;
+}
+.section {
+    display: flex;
+    gap: 20px;
+    overflow-x: auto;
+    scroll-snap-type: x mandatory;
+    box-shadow: 0 3px 10px 0 rgba(#000, 0.1);
+    -webkit-overflow-scrolling: touch;
+    scroll-padding: 1rem;
+    border-radius: 5px;
+    padding: 20px 20px 20px 0px;
+    box-sizing: border-box;
+    overflow-y: hidden;
+}
+.section__item {
+    flex: 0 0 170px;
+    width: 170px;
+    scroll-snap-align: start;
+    cursor: pointer;
+    border-radius: 2px;
+    transition: .1s;
+}
+.section__item > img{
+    width: 100%;
+    height: 120px;
+    object-fit: contain;
+    border-radius: 0px;
+    border: solid rgba(255, 255, 255, 0.158) 1px;
+    opacity: .8;
+}
+.section__item > p{
+    width: 100%;
+    height: 25px;
+    overflow: hidden;
+    text-overflow: ellipsis;
+    white-space: nowrap;
+    line-height: 25px;
+    font-family: sans-serif;
+    color: rgba(255, 255, 255, 0.808);
+    font-size: 13px;
+}
+.section_parent > .shadow{
+    width: 100px;
+    height: 100%;
+    position: fixed;
+    top: 0px;
+    right: 0px;
+    z-index: 1;
+    background: linear-gradient(90deg, transparent, #000000);
+}
+
+
+/* timeline */
+#timeline {
+    width: 100%;
+}
+#timeline > a {
+    width: 100%;
+    height: 90px;
+    color: inherit;
+    cursor: pointer;
+    transition: .3s;
+    line-height: 20px;   
+    text-decoration: none; 
+    border-bottom: 1px solid #4b4b4b;
+    display: block;
+    padding: 22px 0;
+    color: #fff;
+}
+#timeline > a:hover {
+    border-bottom: 2px solid #ffffff;
+}
+#timeline > a > .date {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    align-items: center;
+    font-weight: bold;
+    font-size: 12px;
+}
+#timeline > a > .content {
+    width: 100%;
+    height: 60%;
+    display: flex;
+    align-items: center;
+    font-size: 12px;
+}
+
+
+
+/* data */
+#profile_plus {
+    width: 100%;
+}
+#profile_plus > .data{
+    width: 100%;
+    height: 70px;
+    display: flex;
+    align-items: center;   
+    border-bottom: 1px solid #4b4b4b;
+    user-select: text;
+}
+#profile_plus > .data:first-child{
+    margin-top: 20px;
+}
+#profile_plus > .data > div {
+    width: 100%;
+}
+.name, .desc {
+    width: 100%;
+    display: flex;
+    align-items: center;
+    padding-left: 10px;
+    padding: 3px;
+    box-sizing: border-box;
+    color: rgba(255, 255, 255, 0.852);
+}
+.name {
+    font-size: 18px;
+}
+.desc {
+    line-height: 18px;
+}
+
+
+/* twitter */
+#twitter {
+    width: 600px;
+    height: 500px;
+    max-width: 100%;
+    margin-top: 20px;
+}
+
+
+/* youtube */
+.iframe-wrapper {
+    position: relative;
+    padding-bottom: 56.25%;
+    padding-top: 30px;
+    height: 0;
+    overflow: hidden;
+    margin-top: 20px;
+}
+.iframe-wrapper iframe {
+    position: absolute;
+    top: 0;
+    left: 0;
+    width: 100%;
+    height: 100%;
+}
+
+
+/* anime */
+#anime {
+    margin-top: 20px;
+}
+.toggle {         /*ベース*/
+    display: none;
+}
+.Label {		/*タイトル*/
+    padding: 1em;
+    display: block;
+    color: #fff;
+    background:#161616;
+}
+.Label::before{		/*タイトル横の矢印*/
+    content:"";
+    width: 6px;
+    height: 6px;
+    border-top: 2px solid #fff;
+    border-right: 2px solid #fff;
+    -webkit-transform: rotate(45deg);
+    position: absolute;
+    top:calc( 50% - 3px );
+    right: 20px;
+    transform: rotate(135deg);
+}
+.Label,
+.accordion_content {
+    -webkit-backface-visibility: hidden;
+    backface-visibility: hidden;
+    transform: translateZ(0);
+    transition: all 0.3s;
+    border: 1px solid rgba(255, 255, 255, 0.048);
+}
+.accordion_content {		/*本文*/
+    height: 0;
+    margin-bottom:10px;
+    padding:0 20px;
+    overflow: hidden;
+    color: #fff;
+}
+.toggle:checked + .Label + .accordion_content {	/*開閉時*/
+    height: auto;
+    padding:20px ;
+    transition: all .3s;
+}
+.toggle:checked + .Label::before {
+    transform: rotate(-45deg) !important;
+}
+.accordion_content > p {
+    padding-bottom: 5px;
+    padding-top: 5px;
+}
+
+.newlabel {
+    background-color: red;
+    padding: 3px 4px 3px 4px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 5px;
+}
+.likelabel {
+    background-color: rgb(255, 183, 59);
+    padding: 0px 4px 0px 4px;
+    border-radius: 4px;
+    font-weight: bold;
+    font-size: 13px;
+    margin: 5px;
+}
+
+
+/* playlist */
+#playlist {
+    margin-top: 20px;
+}
+#more {
+    width: 100%;
+    padding: 8px;
+    box-sizing: border-box;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    border: 1px solid rgba(255, 255, 255, 0.048);
+    text-decoration: none;
+}

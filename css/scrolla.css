@@ -1,0 +1,51 @@
+#scroll_a {
+    position: absolute;
+}
+#scroll_a > a {
+    display: inline-block;
+    position: absolute;
+    left: 0px;
+    bottom: 0px;
+    padding: 10px 10px 110px;
+    overflow: hidden;
+    color: #fff;
+    font-size: 14px;
+    font-family: 'Josefin Sans', sans-serif;
+    line-height: 1;
+    letter-spacing: .2em;
+    text-transform: uppercase;
+    text-decoration: none;
+    writing-mode: vertical-lr;
+    padding-left: 20px;
+    background-color: rgba(0, 0, 0, 0.445);
+}
+#scroll_a > a::after {
+    content: '';
+    position: absolute;
+    bottom: 0;
+    left: 50%;
+    width: 1px;
+    height: 100px;
+    background: #fff;
+}
+#scroll_a > a::after {
+    animation: sdl 2.1s cubic-bezier(1, 0, 0, 1) infinite;
+}
+@keyframes sdl {
+    0% {
+        transform: scale(1, 0);
+        transform-origin: 0 0;
+    }
+    50% {
+        transform: scale(1, 1);
+        transform-origin: 0 0;
+    }
+    50.1% {
+        transform: scale(1, 1);
+        transform-origin: 0 100%;
+    }
+    100% {
+        transform: scale(1, 0);
+        transform-origin: 0 100%;
+    }
+}

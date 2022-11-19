@@ -1,0 +1,333 @@
+<!DOCTYPE html>
+<html lang="ja">
+<head>
+    <meta charset="UTF-8">
+    <meta http-equiv="X-UA-Compatible" content="IE=edge">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>milkystack</title>
+    <!-- Library -->
+        <link rel="stylesheet" href="./css/reset.css">
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery/1.11.1/jquery.min.js"></script>
+        <script type="text/javascript" src="https://cdnjs.cloudflare.com/ajax/libs/jquery.inview/1.0.0/jquery.inview.min.js"></script>
+        
+        <link rel="stylesheet" href="https://cdn.rawgit.com/angular/bower-material/v0.10.0/angular-material.css">
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-animate.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-route.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-aria.min.js"></script>
+        <script src="https://ajax.googleapis.com/ajax/libs/angularjs/1.3.15/angular-messages.min.js"></script>
+        <script src="https://cdn.rawgit.com/angular/bower-material/v0.10.0/angular-material.js"></script>
+        <script src="https://s3-us-west-2.amazonaws.com/s.cdpn.io/t-114/assets-cache.js"></script>
+    <!-- MyCodes -->
+        <link rel="stylesheet" href="./css/style.css">
+        <link rel="stylesheet" href="./css/snap.css">
+        <link rel="stylesheet" href="./css/scrolla.css">
+        <link rel="stylesheet" href="./css/kiran.css">
+        <link rel="stylesheet" href="./css/fade.css">
+</head>
+<body>
+    <!-- bg -->
+    <iframe src="./bg/type2/bg.html" frameborder="0" id="bg"></iframe>
+
+    <!-- loading -->
+    <div id="loading">
+        <img src="./image/logo.png" alt="">
+    </div>
+
+    <!-- main -->
+    <main>    
+        <!-- header -->
+        <header>
+            <img src="./image/logo.png" class="logo">
+            <div id="tabs">
+                <a href="./index.html" class="tab active">Home</a>
+                <a href="https://github.com/milkystack" class="tab">Github</a>
+                <a href="./music.html" class="tab">Playlist</a>
+                <a href="https://publicbeta.staba.jp/question/form/?username=milkystack" class="tab">Q&A</a>
+            </div>
+        </header>
+
+        <!-- snap scroll -->
+        <div id="snap_scroll" class="anim-box-onload">
+            <div class="scrollWrap">  
+                <section class="cont">
+                    <img src="./image/boalYKcD.png" alt="" class="snap_img">
+                </section>  
+                <section class="cont">
+                    <img src="./image/IMG_0682.png" alt="" class="snap_img">
+                </section> 
+            </div> 
+        </div>
+        <div id="scroll_a">
+            <a href="#">Scroll</a>
+        </div>
+
+        <div id="main">
+            <!-- Updates -->
+            <div class="content_box inview_re fadeIn_up">
+                <div class="title">
+                    Updates
+                </div>
+                <svg viewBox="0 0 100 100" width="100" height="100" style="top: 0px;">
+                    <defs>
+                        <path id="circle"
+                        d="
+                            M 50, 50
+                            m -37, 0
+                            a 37,37 0 1,1 74,0
+                            a 37,37 0 1,1 -74,0"/>
+                    </defs>
+                    <text font-size="17">
+                        <textPath xlink:href="#circle" style="font-size: 10px;">
+                        You spin me right round, baby...You spin me right round, baby...
+                        </textPath>
+                    </text>
+                </svg>
+                <div class="section_parent">
+                    <div id="section" class="section inview_re fadeIn_right">
+                        <!-- <div class="section__item">
+                            <img src="" alt="">
+                            <p></p>
+                        </div> -->
+                    </div>
+                    <div class="shadow"></div>
+                </div>
+            </div>
+
+            <!-- TimeLine -->
+            <div class="content_box inview_re fadeIn_up">
+                <div class="title">
+                    TimeLine
+                </div>
+                <svg viewBox="0 0 100 100" width="100" height="100" style="top: 0px;">
+                    <defs>
+                        <path id="circle"
+                        d="
+                            M 50, 50
+                            m -37, 0
+                            a 37,37 0 1,1 74,0
+                            a 37,37 0 1,1 -74,0"/>
+                    </defs>
+                    <text font-size="17">
+                        <textPath xlink:href="#circle" style="font-size: 10px;">
+                        You spin me right round, baby...You spin me right round, baby...
+                        </textPath>
+                    </text>
+                </svg>
+                <div id="timeline" class="inview_re fadeIn_up">
+                    <!-- <a href="" class="timeline_content">
+                        <div class="date">
+                        </div>
+                        <div class="content">
+                        </div>
+                    </a> -->
+                </div>
+            </div>
+
+
+            <!-- Data -->
+            <div class="content_box inview_re fadeIn_up">
+                <div class="title">
+                    Data
+                </div>
+                <div id="profile_plus" class="inview_re fadeIn_up">
+                </div>
+            </div>
+            <script>
+                var url = new URL(location.href);
+                var params = new URLSearchParams(url.search);
+                if(params.get('data') != undefined){
+                    profile_plus.innerHTML += '<div class="data"><div><div class="name">原神</div><div class="desc">816161617</div></div></div>';
+                    profile_plus.innerHTML += '<div class="data"><div><div class="name">荒野行動</div><div class="desc">1005115436</div></div></div>';
+                    profile_plus.innerHTML += '<div class="data"><div><div class="name">とあるIF</div><div class="desc">530978364</div></div></div>';
+                }
+            </script>
+
+
+            <!-- twitter -->
+            <div class="content_box inview_re fadeIn_up">
+                <div class="title">
+                    Twitter
+                </div>
+                <svg viewBox="0 0 100 100" width="100" height="100" style="top: 0px;">
+                    <defs>
+                        <path id="circle"
+                        d="
+                            M 50, 50
+                            m -37, 0
+                            a 37,37 0 1,1 74,0
+                            a 37,37 0 1,1 -74,0"/>
+                    </defs>
+                    <text font-size="17">
+                        <textPath xlink:href="#circle" style="font-size: 10px;">
+                        You spin me right round, baby...You spin me right round, baby...
+                        </textPath>
+                    </text>
+                </svg>
+                <div class="inview_re fadeIn_up">
+                    <div id="twitter">
+                        <a class="twitter-timeline" data-chrome="transparent width="100%"
+                        height="500px" data-theme="dark" href="https://twitter.com/ichineko_mi?ref_src=twsrc%5Etfw"></a> <script async src="https://platform.twitter.com/widgets.js" charset="utf-8"></script>
+                    </div> 
+                </div>
+            </div>
+
+
+            <!-- youtube -->
+            <div class="content_box inview_re fadeIn_up">
+                <div class="title">
+                    Youtube
+                </div>
+                <svg viewBox="0 0 100 100" width="100" height="100" style="top: 0px;">
+                    <defs>
+                        <path id="circle"
+                        d="
+                            M 50, 50
+                            m -37, 0
+                            a 37,37 0 1,1 74,0
+                            a 37,37 0 1,1 -74,0"/>
+                    </defs>
+                    <text font-size="17">
+                        <textPath xlink:href="#circle" style="font-size: 10px;">
+                        You spin me right round, baby...You spin me right round, baby...
+                        </textPath>
+                    </text>
+                </svg>
+                <div class="inview_re fadeIn_up">
+                    <div class="iframe-wrapper"><iframe width="560" height="315" src="https://www.youtube.com/embed/nxdm_kaS5Cc" title="YouTube video player" frameborder="0" allow="accelerometer; autoplay; clipboard-write; encrypted-media; gyroscope; picture-in-picture" allowfullscreen></iframe></div>
+                </div>
+            </div>
+
+
+            <!-- anime -->
+            <div class="content_box inview_re fadeIn_up">
+                <div class="title">
+                    Anime
+                </div>
+                <svg viewBox="0 0 100 100" width="100" height="100" style="top: 0px;">
+                    <defs>
+                        <path id="circle"
+                        d="
+                            M 50, 50
+                            m -37, 0
+                            a 37,37 0 1,1 74,0
+                            a 37,37 0 1,1 -74,0"/>
+                    </defs>
+                    <text font-size="17">
+                        <textPath xlink:href="#circle" style="font-size: 10px;">
+                        You spin me right round, baby...You spin me right round, baby...
+                        </textPath>
+                    </text>
+                </svg>
+                <div class="inview_re fadeIn_up">
+                    <section id="anime" class="accordion">
+                        <input id="block-01" type="checkbox" class="toggle">
+                        <label class="Label anim-box kiran" for="block-01">今見ているアニメ</label>
+                        <div class="accordion_content">
+                            <p><span class="newlabel">New</span>不滅のあなたへ Season 2　(現在4話)</p>
+                        </div>
+                        <input id="block-02" type="checkbox" class="toggle">
+                        <label class="Label anim-box kiran" for="block-02">見る予定。</label>
+                        <div class="accordion_content">
+                            <p>五等分の花嫁</p>
+                            <p>BLEACH</p>
+                            <p>リコリス・リコイル</p>
+                        </div>
+                        <input id="block-03" type="checkbox" class="toggle">
+                        <label class="Label anim-box kiran" for="block-03">見たアニメ</label>
+                        <div class="accordion_content">
+                            <p><span class="likelabel">★</span>ジャヒー様はくじけない！</p>
+
+                            <p>シャドーハウス</p>
+                            <p>シャドーハウス Season 2</p>
+                    
+                            <p>はたらく魔王さま</p>
+                            <p>はたらく魔王さま 2nd</p>
+                    
+                            <p><span class="likelabel">★</span>ようこそ実力至上主義の教室へ</p>
+                            <p><span class="likelabel">★</span>ようこそ実力至上主義の教室へ 2nd Season</p>
+                    
+                            <p><span class="likelabel">★</span>SPY×FAMILY</p>
+                            <p><span class="likelabel">★</span>SPY×FAMILY 第2クール</p>
+                    
+                            <p>古見さんは、コミュ症です。</p>
+                            <p>古見さんは、コミュ症です。2期</p>
+                    
+                            <p><span class="likelabel">★</span>小林さんちのメイドラゴン</p>
+                            <p><span class="likelabel">★</span>小林さんちのメイドラゴン S</p>
+                    
+                            <p><span class="likelabel">★</span>へやキャン△</p>
+                            <p><span class="likelabel">★</span>ゆるキャン△</p>
+                            <p><span class="likelabel">★</span>ゆるキャン△ Season 2</p>
+                    
+                            <p><span class="likelabel">★</span>とある科学の超電磁砲</p>       
+                            <p><span class="likelabel">★</span>とある科学の超電磁砲 S</p>
+                            <p><span class="likelabel">★</span>とある科学の超電磁砲 T</p>
+                            <p>とある魔術の禁書目録</p>
+                            <p>とある魔術の禁書目録 II</p>
+                            <p>とある魔術の禁書目録 III</p>
+                            <p>とある科学の一方通行</p>
+                    
+                            <p>約束のネバーランド</p>
+                            <p>約束のネバーランド Season 2</p>
+                    
+                            <p><span class="likelabel">★</span>君の名は。</p>
+                            <p>天気の子</p>
+                            <p>言の葉の庭</p>
+                            <p>秒速5センチメートル</p>
+                    
+                            <p>Angel Beats!</p>
+                            <p>Charlotte</p>
+                            <p>神様になった日</p>
+                    
+                            <p><span class="likelabel">★</span>白い砂のアクアトープ</p>
+                            <p>色づく世界の明日から</p>
+                    
+                            <p>大正オトメ御伽話</p>
+                            <p>宇崎ちゃんは遊びたい！</p>
+                            <p><span class="likelabel">★</span>サマータイムレンダ</p>
+                            <p>よふかしのうた</p>
+                            <p>異世界薬局</p>
+                            <p>であいもん</p>
+                            <p>ホリミヤ</p>
+                            <p>五等分の花嫁 (少し)</p>
+                            <p>可愛いだけじゃない、式守さん</p>
+                            <p>HELLO WORLD</p>
+                            <p>出会って５秒でバトル</p>
+                            <p>不滅のあなたへ</p>
+                            <p>泣きたい私は猫をかぶる</p>
+                            <p>打ち上げ花火、下から見るか？横から見るか？</p>
+                            <p>ひげを剃るそして女子高生を拾う</p>
+                            <p>トニカクカワイイ</p>
+                            <p>サマーウォーズ</p>
+                            <p>パリピ孔明</p>
+                            <p>スーパーカブ (少し)</p>
+                            <p>放課後ていぼう日誌</p>
+                            <p>一週間フレンズ</p>
+                            <p>かげきしょうじょ</p>
+                            <p>vivy</p>
+                            <p>takt op.Destiny</p>
+                            <p>ソードアートオンライン オルタナティブ ガンゲイルオンライン</p>
+                        </div>
+                    </section>                
+                </div>
+            </div>
+
+
+            <!-- song -->
+            <div class="content_box inview_re fadeIn_up">
+                <div class="title">
+                    <p>Favorite Songs Top3 <span style="font-size: 13px;">(Src Apple Music)</span><p>
+                </div>
+                <div id="playlist" class="inview_re fadeIn_up">
+                </div>
+            </div>
+
+            
+        </div>
+    </main>
+    
+    <!-- MyCodes -->
+    <script src="./script.js"></script>
+</body>
+</html>

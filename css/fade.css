@@ -1,0 +1,40 @@
+.fadeIn {
+    opacity: 0;
+    transition: 1s;
+}
+.fadeIn.is-show {
+    opacity: 1;
+}
+
+.fadeIn_right {
+    opacity: 0;
+    transform: translate(20%, 0);
+    transition: 2s;
+    transition-delay: .3s;
+}
+.fadeIn_right.is-show {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.fadeIn_left {
+    opacity: 0;
+    transform: translate(-20%, 0);
+    transition: 1s;
+    transition-delay: .3s;
+}
+.fadeIn_left.is-show {
+    transform: translate(0, 0);
+    opacity: 1;
+}
+
+.fadeIn_up {
+    opacity: 0;
+    transform: translate(0, 20%);
+    transition: 1s;
+    transition-delay: .3s;
+}
+.fadeIn_up.is-show {
+    transform: translate(0, 0);
+    opacity: 1;
+}
