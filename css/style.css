@@ -26,7 +26,15 @@ main {
     width: 100%;
     position: relative;
     z-index: 1;
+    margin: 0 auto;
+    transition: .5s;
 }
+@media screen and (min-width: 1000px) {
+    main {
+        width: 70%;
+    }
+}
+
 /* header */
 header {
     width: 100%;

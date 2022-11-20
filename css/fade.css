@@ -20,8 +20,7 @@
 .fadeIn_left {
     opacity: 0;
     transform: translate(-20%, 0);
-    transition: 1s;
-    transition-delay: .3s;
+    transition: .6s;
 }
 .fadeIn_left.is-show {
     transform: translate(0, 0);
