@@ -13,7 +13,7 @@ request_02.onload = function() {
     }
 
     for (var index = 0; index < list.length; index++) {
-        var elem = '<a href="'+list[index].link+'"><div class="section__item"><img src="'+list[index].cover+'" alt=""><p>'+list[index].title+'</p></div></a>'
+        var elem = '<a href="'+list[index].link+'"><div class="section__item"><div><img src="'+list[index].cover+'" alt=""></div><p>'+list[index].title+'</p></div></a>'
         section.innerHTML += elem;
     }
 }
