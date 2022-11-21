@@ -299,12 +299,22 @@ svg {
 #sns_box > div{
     float: left;
     width: 50%;
-    min-width: 450px;
     box-sizing: border-box;
+    transition: .5s;
 }
 #sns_box > div:first-child{
     padding-right: 20px;
 }
+@media screen and (max-width: 600px) {
+    #sns_box > div{
+        width: 100%;
+        min-width: unset;
+    }
+    #sns_box > div:first-child{
+        padding-right: unset;
+    }
+}
+
 
 
 /* twitter */
