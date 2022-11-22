@@ -7,7 +7,7 @@ request_02.onload = function() {
     list = JSON.parse(JSON.stringify(list));
 
     for (var index = 0; index < list.length; index++) {
-        var elem = '<a href="'+list[index].link+'" class="timeline_content"><div class="date">'+list[index].date+'</div><div class="content">'+list[index].title+'</div></a>'
+        var elem = '<a href="'+list[index].link+'" class="timeline_content inview_re fadeIn_up"><div class="date">'+list[index].date+'</div><div class="content">'+list[index].title+'</div></a>'
         timeline.insertAdjacentHTML('beforeend', elem); 
         if(index == 2){break;}
     }
@@ -16,6 +16,7 @@ request_02.onload = function() {
         var elem = '<a href="'+list[index].link+'"><div class="section__item"><div><img src="'+list[index].cover+'" alt=""></div><p>'+list[index].title+'</p></div></a>'
         section.innerHTML += elem;
     }
+    init();
 }
 
 var request = new XMLHttpRequest();
@@ -36,16 +37,10 @@ request.onload = function() {
             return;
         }
     }
+    init();
 }
 
 $(function(){
-    $(".inview_re").on("inview", function (event, isInView) {
-        if (isInView) {
-            $(this).stop().addClass("is-show");
-        } else {
-            $(this).stop().removeClass("is-show");
-        }
-    });
     $(window).on('load',function(){
         setTimeout(() => {
             loading.style.left = "100%";
@@ -57,3 +52,12 @@ $(function(){
         }, 500);
     });
 });
+function init() {
+    $(".inview_re").on("inview", function (event, isInView) {
+        if (isInView) {
+            $(this).stop().addClass("is-show");
+        } else {
+            $(this).stop().removeClass("is-show");
+        }
+    });
+}

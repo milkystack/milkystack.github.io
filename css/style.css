@@ -188,14 +188,14 @@ svg {
     background-color: rgb(255, 192, 203);
     width: 100%;
     border-radius: 10px;
-    padding: 5px;
+    padding: 6px;
     box-sizing: border-box;
     display: flex;
     align-items: center;
 }
 .section__item > div > img{
     object-fit: contain;
-    border: solid 3px #fff;
+    border: solid 2px #fff;
     box-sizing: border-box;
     opacity: .7;
     width: 100%;
@@ -231,18 +231,15 @@ svg {
 #timeline > a {
     width: 100%;
     height: 90px;
-    color: inherit;
     cursor: pointer;
-    transition: .3s;
     line-height: 20px;   
     text-decoration: none; 
     border-bottom: 5px solid rgba(255, 155, 172, 0.568);
     background-color: #fff;
-    opacity: 0.8;
+    color: rgba(0, 0, 0, 0.726);
     border-radius: 10px;    
     display: block;
     padding: 10px;
-    color: #000;
     margin-top: 20px;
     font-weight: bold;
 }
@@ -293,12 +290,12 @@ svg {
     padding-left: 10px;
     padding: 3px;
     box-sizing: border-box;
-    color: #000;
+    color: rgba(0, 0, 0, 0.726);
     font-weight: bold;
     font-size: 12px;
 }
 .name {
-    font-size: 18px;
+    font-size: 14px;
 }
 .desc {
     line-height: 18px;
@@ -328,13 +325,14 @@ svg {
 /* twitter */
 #twitter {
     width: 600px;
-    height: 500px;
+    height: 400px;
     max-width: 100%;
     margin-top: 20px;
-    padding: 20px 10px 0px 10px;
+    padding: 13px 10px 0px 10px;
     background:rgba(255, 155, 172, 0.568);
     border-radius: 10px;
     box-sizing: border-box;
+    border: solid 3px #fff;
 }
 
 
@@ -345,6 +343,8 @@ svg {
     padding-top: 30px;
     height: 0;
     overflow: hidden;
+    border: solid 3px #fff;
+    border-radius: 10px;
 }
 .iframe-wrapper iframe {
     position: absolute;
@@ -356,7 +356,7 @@ svg {
 }
 #youtube_parent {
     margin-top: 20px;
-    padding: 20px 10px 0px 10px;
+    padding: 13px 10px 0px 10px;
     background:rgba(255, 155, 172, 0.568);
     border-radius: 10px;
     box-sizing: border-box;
