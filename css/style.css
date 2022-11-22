@@ -188,10 +188,8 @@ svg {
     background-color: rgb(255, 192, 203);
     width: 100%;
     border-radius: 10px;
-    padding: 6px;
+    padding: 6px 6px 0px 6px;
     box-sizing: border-box;
-    display: flex;
-    align-items: center;
 }
 .section__item > div > img{
     object-fit: contain;
