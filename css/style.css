@@ -89,23 +89,33 @@ header > #tabs > .active {
     align-items: center;
     justify-content: center;
 }
-#loading > img{
+#loading > svg{
     width: 50%;
     max-width: 300px;
-    animation: flash 2.8s ease-out infinite;
 }
-@keyframes flash {
+#loading > svg path {
+    fill: #000;
+    stroke: #000;
+    fill-opacity: 0;
+    stroke-width: 1px;
+    stroke-dasharray: 1000;
+    stroke-dashoffset: 0;
+    animation: 2s ease-out forwards 0.5s textAnimation;
+}
+@keyframes textAnimation {
     0% {
-      opacity: 0.5;
+        stroke-dashoffset: 0;
     }
-    50% {
-      opacity: 0;
+    90% {
+        stroke-dashoffset: 1000;
+        fill-opacity: 0;        
+
     }
     100% {
-      opacity: 0.5;
+        stroke-dashoffset: 0;
+        fill-opacity: 1;
     }
 }
-
   
 /* common */
 #main {
@@ -141,7 +151,7 @@ header > #tabs > .active {
     color: #000;
     font-family: sans-serif;
 }
-svg {
+.content_box svg {
     fill: currentColor;
     height: auto;
     max-width: 66vmin;

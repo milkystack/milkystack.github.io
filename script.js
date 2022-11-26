@@ -49,7 +49,7 @@ $(function(){
                 behavior: "smooth"
             });
             $("#snap_scroll").addClass("kiran");
-        }, 500);
+        }, 2500);
     });
 });
 function init() {
