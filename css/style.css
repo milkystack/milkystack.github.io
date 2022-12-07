@@ -188,7 +188,7 @@ header > #tabs > .active {
 }
 .section__item {
     flex: 0 0 170px;
-    width: 170px;
+    width: 223px;
     scroll-snap-align: start;
     cursor: pointer;
     border-radius: 2px;
